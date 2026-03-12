@@ -4,7 +4,7 @@ export default function Footer() {
   const { text } = useLanguage();
 
   return (
-    <footer className="relative z-10 mt-20 border-t border-white/10 bg-[#162f4a] text-sand">
+    <footer className="relative z-10 mt-20 border-t border-white/10 bg-[#0D3B66] text-sand">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         <div>
           <h3 className="font-display text-2xl font-bold text-white">VISAKRUTHI</h3>
