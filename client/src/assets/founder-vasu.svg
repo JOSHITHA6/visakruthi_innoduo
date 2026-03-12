@@ -1,0 +1,14 @@
+<svg width="800" height="900" viewBox="0 0 800 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="900" rx="48" fill="#F5EFE6"/>
+  <rect x="60" y="60" width="680" height="780" rx="40" fill="url(#paint0_linear)"/>
+  <circle cx="400" cy="310" r="150" fill="#F5EFE6" fill-opacity="0.95"/>
+  <path d="M252 684C252 584.023 333.023 503 433 503H367C466.977 503 548 584.023 548 684V716H252V684Z" fill="#F5EFE6" fill-opacity="0.95"/>
+  <path d="M308 286C308 230.772 352.772 186 408 186H452C507.228 186 552 230.772 552 286V334H308V286Z" fill="#D4A373"/>
+  <text x="400" y="792" text-anchor="middle" fill="#F5EFE6" font-family="Georgia, serif" font-size="46" font-weight="700">Vasupriya</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="140" y1="120" x2="664" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C46A3C"/>
+      <stop offset="1" stop-color="#1E3A5F"/>
+    </linearGradient>
+  </defs>
+</svg>

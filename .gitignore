@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.*
+.DS_Store
+client/dist
+server/uploads
+npm-debug.log*
+*.local
+*.log
+*service-account*.json
+google-credentials.json
