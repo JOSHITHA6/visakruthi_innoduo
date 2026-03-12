@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-terracotta: #c46a3c;
-  --color-indigo: #1e3a5f;
-  --color-sand: #f5efe6;
-  --color-gold: #d4a373;
-  --color-ink: #182333;
+  --color-terracotta: #E8540D;
+  --color-indigo: #0D3B66;
+  --color-sand: #FEFAF5;
+  --color-gold: #E8B746;
+  --color-ink: #1B2A32;
   --font-sans: "Manrope", sans-serif;
   --font-telugu: "Noto Sans Telugu", sans-serif;
   --font-display: "Playfair Display", serif;
@@ -21,9 +21,9 @@ body {
   font-family: var(--font-sans);
   color: var(--color-ink);
   background:
-    radial-gradient(circle at top left, rgba(212, 163, 115, 0.22), transparent 34%),
-    radial-gradient(circle at right center, rgba(30, 58, 95, 0.06), transparent 28%),
-    linear-gradient(180deg, #fbf7f1 0%, #f6efe5 54%, #f3ebdf 100%);
+    radial-gradient(circle at top left, rgba(232, 84, 13, 0.12), transparent 34%),
+    radial-gradient(circle at right center, rgba(13, 59, 102, 0.08), transparent 28%),
+    linear-gradient(180deg, #fefaf5 0%, #fcf7f2 54%, #faf3eb 100%);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -50,9 +50,9 @@ body[data-language="te"] .font-display {
 }
 
 .card-surface {
-  background: rgba(255, 251, 246, 0.96);
+  background: rgba(254, 250, 245, 0.96);
   backdrop-filter: blur(10px);
-  box-shadow: 0 18px 40px rgba(30, 58, 95, 0.1);
+  box-shadow: 0 18px 40px rgba(13, 59, 102, 0.12);
 }
 
 .mesh-border {
@@ -65,7 +65,7 @@ body[data-language="te"] .font-display {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(196, 106, 60, 0.58), rgba(30, 58, 95, 0.22));
+  background: linear-gradient(135deg, rgba(232, 84, 13, 0.48), rgba(13, 59, 102, 0.28));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -87,7 +87,7 @@ body[data-language="te"] .font-display {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(212, 163, 115, 0.08), transparent 16%, transparent 84%, rgba(30, 58, 95, 0.04)),
+    linear-gradient(90deg, rgba(232, 84, 13, 0.06), transparent 16%, transparent 84%, rgba(13, 59, 102, 0.04)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 18%);
   pointer-events: none;
 }
