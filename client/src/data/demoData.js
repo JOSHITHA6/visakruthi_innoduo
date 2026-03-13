@@ -1,5 +1,8 @@
 import josh from "../assets/josh.jpg";
 import vasp from "../assets/vasp.jpg";
+import etikoppakaToys from "../assets/EtikoppakaToys.png";
+import cheepuruCraft from "../assets/Cheepuru Craft.png";
+import storyLedWorkshop from "../assets/storyled.png";
 
 export const founders = [
   {
@@ -151,7 +154,7 @@ export const workshopCategoriesData = [
       "Visitors explore the making process behind iconic Etikoppaka toys, from shaping the wood to applying natural lac finishes and understanding the storytelling behind each object.",
     people: ["Lalitha Devi", "Family lacquer artisans"],
     video: "https://www.youtube.com/embed/v8aIb6fwzPw",
-    image: "https://images.unsplash.com/photo-1517816428104-797678c7cf0e?auto=format&fit=crop&w=1200&q=80",
+    image: etikoppakaToys,
     availability: ["Weekdays 10 AM - 1 PM", "Saturday cultural sessions", "Advance booking recommended"]
   },
   {
@@ -162,7 +165,7 @@ export const workshopCategoriesData = [
       "This category introduces the full process of making cheepuru brooms, including material preparation, tying, shaping, and the role of utility craft in regional livelihoods.",
     people: ["Satyam Apparao", "Community broom makers"],
     video: "https://www.youtube.com/embed/tbJaVcRD7jE",
-    image: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1200&q=80",
+    image: cheepuruCraft,
     availability: ["Morning batch for visitors", "School groups by request", "Seasonal live demonstrations"]
   },
   {
@@ -173,7 +176,7 @@ export const workshopCategoriesData = [
       "Participants learn how bamboo is split, softened, woven, and finished into baskets, lighting, and functional decor grounded in local making traditions.",
     people: ["Jagannadha Rao", "Regional bamboo artisans"],
     video: "https://www.youtube.com/embed/qgoszqAj1ag",
-    image: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1200&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Woman_weaving_a_bamboo_basket%2C_Tasikmalaya.jpg/1280px-Woman_weaving_a_bamboo_basket%2C_Tasikmalaya.jpg",
     availability: ["Araku trail sessions", "Weekend weaving workshops", "Group visits welcome"]
   },
   {
@@ -184,7 +187,7 @@ export const workshopCategoriesData = [
       "Sessions in this category combine object-making, symbolism, and oral storytelling to present tribal artistry as both heritage and living practice.",
     people: ["Sirisha Korra", "Women-led artisan collective"],
     video: "https://www.youtube.com/embed/BrdtjmRDNiE",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tribal_Handicraft_Showroom_at_Amer_Fort.jpg/1280px-Tribal_Handicraft_Showroom_at_Amer_Fort.jpg",
     availability: ["Story circle every Friday", "Student immersion days", "Collective-led custom sessions"]
   },
   {
@@ -195,7 +198,7 @@ export const workshopCategoriesData = [
       "This category highlights how traditional methods can be adapted into refined, travel-ready keepsakes that still reflect regional identity and craft authenticity.",
     people: ["Mixed artisan cluster", "Visitor product curators"],
     video: "https://www.youtube.com/embed/PijlJaY213k",
-    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ceramic_Master_in_his_garage_working_on_handmade_maltese_souvenirs_-_traditional_maltese_balconies_%28or_gallarija%29.jpg/1280px-Ceramic_Master_in_his_garage_working_on_handmade_maltese_souvenirs_-_traditional_maltese_balconies_%28or_gallarija%29.jpg",
     availability: ["By curated appointment", "Small group product sessions", "Retail insight add-on available"]
   },
   {
@@ -206,7 +209,7 @@ export const workshopCategoriesData = [
       "Designed for students, visitors, and heritage learners, these workshops combine live demonstration with oral narratives and guided reflection.",
     people: ["KalaSaathi facilitators", "Artisan storytellers"],
     video: "https://www.youtube.com/embed/uurepZrTu1k",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: storyLedWorkshop,
     availability: ["College modules available", "Heritage walk tie-ins", "Best for guided cohorts"]
   }
 ];
