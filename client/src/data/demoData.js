@@ -69,8 +69,8 @@ export const demoArtisans = [
     featured: true,
     gallery: [
       "https://i.ytimg.com/vi/siGvGxy8E7g/hqdefault.jpg",
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=80"
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Brooms_at_market_%282%29.JPG/1280px-Brooms_at_market_%282%29.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Coconut_leaf_brooms.jpg/1280px-Coconut_leaf_brooms.jpg"
     ],
     reels: [{ title: "Cheepuru tying reel", url: "https://www.youtube.com/embed/tbJaVcRD7jE" }]
   },
