@@ -10,3 +10,5 @@ npm-debug.log*
 *.log
 *service-account*.json
 google-credentials.json
+assets/
+client/src/assets/
