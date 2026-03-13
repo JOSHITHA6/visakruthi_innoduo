@@ -28,7 +28,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/explore"
-              className="rounded-full bg-gradient-to-r from-terracotta to-[#F07828] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-terracotta/40 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-terracotta/50"
+              className="rounded-full bg-linear-to-r from-terracotta to-[#F07828] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-terracotta/40 transition hover:-translate-y-0.5 hover:shadow-lg hover:shadow-terracotta/50"
             >
               {text("Explore Crafts", "కళలను చూడండి")}
             </Link>
@@ -41,10 +41,10 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="mesh-border card-surface relative rounded-[2rem] p-5">
+        <div className="mesh-border card-surface relative rounded-4xl p-5">
           <div className="rounded-[1.75rem] bg-[linear-gradient(135deg,#0D3B66_0%,#0D4975_42%,#E8540D_100%)] p-6 text-sand">
             <div className="grid gap-4 md:grid-cols-2">
-              <div className="rounded-[1.5rem] bg-white/10 p-5">
+              <div className="rounded-3xl bg-white/10 p-5">
                 <p className="text-xs uppercase tracking-[0.28em] text-gold">{text("Mission", "లక్ష్యం")}</p>
                 <p className="mt-3 text-lg font-semibold">
                   {text(
@@ -53,7 +53,7 @@ export default function HeroSection() {
                   )}
                 </p>
               </div>
-              <div className="rounded-[1.5rem] bg-white/10 p-5">
+              <div className="rounded-3xl bg-white/10 p-5">
                 <p className="text-xs uppercase tracking-[0.28em] text-gold">{text("Vision", "దృష్టి")}</p>
                 <p className="mt-3 text-lg font-semibold">
                   {text(
@@ -63,7 +63,7 @@ export default function HeroSection() {
                 </p>
               </div>
             </div>
-            <div className="mt-6 rounded-[1.5rem] bg-sand/95 p-5 text-indigo">
+            <div className="mt-6 rounded-3xl bg-sand/95 p-5 text-indigo">
               <p className="text-xs uppercase tracking-[0.28em] text-terracotta">{text("Platform Highlights", "వేదిక విశేషాలు")}</p>
               <div className="mt-3 grid gap-4 sm:grid-cols-3">
                 <div>
