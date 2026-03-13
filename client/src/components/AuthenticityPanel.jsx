@@ -1,9 +1,12 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { verifyAuthenticityCode } from "../services/api";
 import { useLanguage } from "./LanguageContext";
 
 export default function AuthenticityPanel({ artisan }) {
   const { text } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [codeInput, setCodeInput] = useState(artisan?.authenticity?.code || "");
   const [result, setResult] = useState(null);
   const [isVerifying, setIsVerifying] = useState(false);
@@ -12,11 +15,12 @@ export default function AuthenticityPanel({ artisan }) {
     return null;
   }
 
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : "http://localhost:5173";
+  const fallbackBaseUrl = typeof window !== "undefined" ? window.location.origin : "http://localhost:5173";
+  const publicBaseUrl = (import.meta.env.VITE_PUBLIC_APP_URL || fallbackBaseUrl).replace(/\/$/, "");
 
   const verifyUrl = useMemo(
-    () => `${baseUrl}/artisans/${artisan.id}?verify=${encodeURIComponent(artisan.authenticity.code)}`,
-    [artisan.authenticity.code, artisan.id, baseUrl]
+    () => `${publicBaseUrl}/artisans/${artisan.id}?verify=${encodeURIComponent(artisan.authenticity.code)}`,
+    [artisan.authenticity.code, artisan.id, publicBaseUrl]
   );
 
   const qrImage = useMemo(
@@ -31,7 +35,38 @@ export default function AuthenticityPanel({ artisan }) {
     setIsVerifying(false);
   };
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const scannedCode = params.get("verify");
+    if (!scannedCode) {
+      return;
+    }
+
+    let active = true;
+    const verifyScannedCode = async () => {
+      setCodeInput(scannedCode);
+      setIsVerifying(true);
+      const response = await verifyAuthenticityCode(scannedCode);
+      if (!active) {
+        return;
+      }
+      setResult(response);
+      setIsVerifying(false);
+
+      params.delete("verify");
+      const search = params.toString();
+      navigate({ pathname: location.pathname, search: search ? `?${search}` : "" }, { replace: true });
+    };
+
+    verifyScannedCode();
+
+    return () => {
+      active = false;
+    };
+  }, [location.pathname, location.search, navigate]);
+
   const isValidForThisArtisan = Boolean(result?.valid && result?.artisanId === artisan.id);
+  const isLocalQrLink = /localhost|127\.0\.0\.1/i.test(publicBaseUrl);
 
   return (
     <section className="mesh-border card-surface mt-8 rounded-4xl p-6 lg:p-8">
@@ -89,6 +124,14 @@ export default function AuthenticityPanel({ artisan }) {
         <div className="rounded-3xl bg-white p-4 text-center shadow-sm">
           <img src={qrImage} alt={text("Artisan authenticity QR", "కళాకారుడి ప్రామాణికత QR")} className="mx-auto h-56 w-56" loading="lazy" />
           <p className="mt-3 text-xs text-ink/60">{text("Scan with phone camera to open verification link", "ధృవీకరణ లింక్ తెరవడానికి ఫోన్ కెమెరాతో స్కాన్ చేయండి")}</p>
+          {isLocalQrLink ? (
+            <p className="mt-2 text-xs font-semibold text-amber-700">
+              {text(
+                "QR currently points to localhost. Set VITE_PUBLIC_APP_URL to your live domain or LAN URL for mobile scanning.",
+                "QR ప్రస్తుతం localhost ను సూచిస్తోంది. మొబైల్ స్కానింగ్ కోసం VITE_PUBLIC_APP_URL ను మీ లైవ్ డొమైన్ లేదా LAN URL గా సెట్ చేయండి."
+              )}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>
