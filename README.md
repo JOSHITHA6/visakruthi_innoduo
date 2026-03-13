@@ -83,6 +83,7 @@ git push -u origin main
 
 ```env
 VITE_API_BASE_URL=https://your-render-backend.onrender.com/api
+VITE_PUBLIC_APP_URL=https://your-vercel-frontend.vercel.app
 ```
 
 ### Backend on Render
